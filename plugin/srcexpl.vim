@@ -1446,7 +1446,7 @@ function! <SID>SrcExpl_Init()
     " Auto change current work directory
     exe "set autochdir"
     " Let Vim find the possible tags file
-    exe "set tags=tags;"
+    exe "set tags+=tags;"
     " Set the actual update time according to user's requirement
     " 100 milliseconds by default
     exe "set updatetime=" . string(g:SrcExpl_refreshTime)
