@@ -621,7 +621,8 @@ function! <SID>SrcExpl_WinNew(wincmd)
         return 0
     endif
 
-    exe 'silent! botright ' . string(g:SrcExpl_winHeight) . 'split ' . a:wincmd
+    " exe 'silent! botright ' . string(g:SrcExpl_winHeight) . 'split ' . a:wincmd
+    exe 'silent! botright ' . 'vsplit ' . a:wincmd
     let srcexpl_win = winnr("$")
     call setwinvar(srcexpl_win, s:SrcExpl_winName, 1)
     let s:SrcExpl_Window = srcexpl_win
